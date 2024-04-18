@@ -33,4 +33,14 @@ require __DIR__ . '/auth.php';
 
 //route per pagina di amministrazione
 
-Route::get('/admin', [DashboardController::class, 'index'])->middleware(['auth']);
+// Route::get('/admin', [DashboardController::class, 'index'])->middleware(['auth']);
+
+Route::middleware(['auth', 'verified'])
+    ->name('admin.')
+    ->prefix('admin')
+    ->group(
+        function () {
+
+            Route::get('/', [DashboardController::class, 'index'])->name('index');
+        }
+    );
