@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +31,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
+//route per pagina di amministrazione
 
+Route::get('/admin', [DashboardController::class, 'index'])->middleware(['auth']);
