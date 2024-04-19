@@ -80,13 +80,13 @@
 
         <div class="modal-footer">
 
-            {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+            <form action="{{route('admin.projects.destroy', $project->id)}}" method="POST">
                 @csrf
                 @method("DELETE")
                 
                 <button class="btn btn-danger">Elimina</button>
-            </form> --}}
+            </form>
 
         </div>
 
