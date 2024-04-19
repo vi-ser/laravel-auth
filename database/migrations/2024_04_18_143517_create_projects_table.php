@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('name');
             $table->text('description');
             $table->text('src');
-            $table->text('technology');
+            $table->string('technology')->nullable();
             $table->text('github_link');
             $table->date('date');
             $table->timestamps();

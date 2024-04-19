@@ -10,7 +10,7 @@
             I miei progetti
         </h2>
 
-        <a href="" class="btn btn-primary mb-5">Aggiungi progetto</a>
+        <a href="{{ route('admin.projects.create')}}" class="btn btn-primary mb-5">Aggiungi progetto</a>
 
     
         <ul id="project-list" class="d-flex gap-3 flex-wrap p-0">

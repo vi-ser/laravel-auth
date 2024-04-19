@@ -24,7 +24,7 @@ class ProjectSeeder extends Seeder
             $newProject->name = $faker->sentence();
             $newProject->description = $faker->paragraph();
             $newProject->src = 'https://picsum.photos/640/480?random=' . $faker->unique()->randomNumber();
-            $newProject->technology = implode(' ', $faker->words(5));
+            $newProject->technology = 'html, css, vue';
             $newProject->github_link = 'https://github.com/';
             $newProject->date = $faker->date();
 
