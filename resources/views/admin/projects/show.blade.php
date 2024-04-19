@@ -4,14 +4,13 @@
 <div id="project">
 
     <div class="container p-5">
-
-        <h2 class="fw-bold">
-            
-        </h2>
     
         <div id="project" class="pb-5">
 
-            <img src="{{ $project->src }}" alt="{{ $project->name }}" class="w-100 mb-5" style="height: 300px; object-fit: cover;">
+            <a href="{{ route('admin.projects.index')}}" class="text-decoration-none text-secondary">&larr;
+                Torna ai progetti</a>
+
+            <img src="{{ $project->src }}" alt="{{ $project->name }}" class="w-100 my-5" style="height: 300px; object-fit: cover;">
             <div class="data-sheet">
                 <h3>
                     {{ $project->name }}
