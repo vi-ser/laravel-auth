@@ -10,7 +10,7 @@
             Aggiungi progetto
         </h2>
 
-        <form action="{{ route('admin.projects.store')}}" method="POST" class="p-5">
+        <form action="{{ route('admin.projects.store')}}" method="POST" class="p-5" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">
@@ -34,8 +34,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="src" class="form-label">Url copertina</label>
-                <input type="text" class="form-control @error('src') is-invalid @enderror" id="src" name="src" value="{{old('src')}}">
+                <label for="src" class="form-label">Immagine di copertina</label>
+                <input type="file" class="form-control @error('src') is-invalid @enderror" id="src" name="src" value="{{old('src')}}">
                  @error('src')
                  <div class="invalid-feedback">
                     {{$message}}
@@ -44,9 +44,9 @@
             </div>
 
             <div class="mb-3">
-                <label for="technnology" class="form-label">Tecnologie utilizzate</label>
-                <input type="text" class="form-control @error('technnology') is-invalid @enderror" id="technnology" name="technnology" value="{{old('technnology')}}">
-                @error('technnology')
+                <label for="technology" class="form-label">Tecnologie utilizzate</label>
+                <input type="text" class="form-control @error('technology') is-invalid @enderror" id="technology" name="technology" value="{{old('technology')}}">
+                @error('technology')
                 <div class="invalid-feedback">
                     {{$message}}
                 </div>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="github_link" class="form-label">Link Github</label>
+                <label for="github_link" class="form-label">Link progetto</label>
                 <input type="text" class="form-control @error('github_link') is-invalid @enderror" id="github_link" name="github_link" value="{{old('github_link')}}" required>
                  @error('github_link')
                  <div class="invalid-feedback">

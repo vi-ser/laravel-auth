@@ -13,12 +13,12 @@
         <a href="{{ route('admin.projects.create')}}" class="btn btn-primary mb-5">Aggiungi progetto</a>
 
     
-        <ul id="project-list" class="d-flex gap-3 flex-wrap p-0">
+        <ul id="project-list" class="d-flex gap-4 flex-wrap p-0">
 
             @foreach ($projects as $project)
 
             <li class="card" style="width: 18rem;">
-                <img src="{{ $project['src'] }}" class="card-img-top" alt="{{ $project->name }}">
+                <img src="{{asset('storage/' . $project->src)}}" class="card-img-top object-fit-cover" alt="{{ $project->name }}" style="height: 220px">
                 <div class="card-body">
                   <h5 class="card-title">{{ $project->name }}</h5>
                   <p class="card-text">{{ $project->description }}</p>

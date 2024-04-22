@@ -10,7 +10,7 @@
             <a href="{{ route('admin.projects.index')}}" class="text-decoration-none text-secondary">&larr;
                 Torna ai progetti</a>
 
-            <img src="{{ $project->src }}" alt="{{ $project->name }}" class="w-100 my-5" style="height: 300px; object-fit: cover;">
+            <img src="{{asset('storage/' . $project->src)}}" alt="{{ $project->name }}" class="w-100 my-5" style="height: 300px; object-fit: cover;">
             <div class="data-sheet">
                 <h3>
                     {{ $project->name }}
@@ -45,7 +45,7 @@
                 <br>
                 <br>
 
-                <a class="text-black fw-bold" href="{{ $project->github_link }}" target="_blank">Link Github</a>
+                <a class="text-black fw-bold" href="{{ $project->github_link }}" target="_blank">Link progetto</a>
                 <br>
                 <br>
                 <div class="pb-5 d-flex align-items-center gap-2">
